@@ -22,9 +22,9 @@ class Deck {
     }
     
     func drawRandomCard() -> PlayingCard{
-        var card = PlayingCard()
-        var randomNumber : Int = Int(arc4random()) % (cardDeck.count - 1)
-        card = cardDeck[randomNumber]
+
+        var randomNumber : Int = Int(rand()) % (cardDeck.count - 1)
+        var card = cardDeck[randomNumber]
         cardDeck.removeAtIndex(randomNumber)
         return card
     }
