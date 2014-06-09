@@ -5,7 +5,7 @@
 //  Created by Victor Yudi on 6/5/14.
 //  Copyright (c) 2014 Leaf Tech. All rights reserved.
 //
-
+// 
 import Foundation
 
 class PlayingCard : Card{
