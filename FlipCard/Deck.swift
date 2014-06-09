@@ -21,8 +21,12 @@ class Deck {
         }
     }
     
-    func drawRandomCard() -> Card{
+    func drawRandomCard() -> Card?{
 
+        if cardDeck.count == 0{
+            return nil
+        }
+        
         var randomNumber : Int = Int(rand()) % (cardDeck.count - 1)
         var card = cardDeck[randomNumber]
         cardDeck.removeAtIndex(randomNumber)
