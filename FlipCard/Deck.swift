@@ -8,11 +8,11 @@
 
 import Foundation
 
-var cardDeck = Array<PlayingCard>()
+var cardDeck = Array<Card>()
 
 class Deck {
     
-    func addCard(card : PlayingCard , atTop : Bool = false){
+    func addCard(card : Card , atTop : Bool = false){
         
         if atTop {
             cardDeck.insert(card, atIndex: 0);
@@ -21,7 +21,7 @@ class Deck {
         }
     }
     
-    func drawRandomCard() -> PlayingCard{
+    func drawRandomCard() -> Card{
 
         var randomNumber : Int = Int(rand()) % (cardDeck.count - 1)
         var card = cardDeck[randomNumber]
